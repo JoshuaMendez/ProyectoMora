@@ -1,32 +1,45 @@
 import tkinter as tk
 import customtkinter as ctk
-ventana = ctk.CTk()
-# configuracion de la ventana
-ventana._set_appearance_mode("light")  # cambia el modo de la apariencia
-# asigna titulo a la ventana
-ventana.title("Garras, Perros y Llaveros S.A. - Recuerdos")
-ventana.geometry("1270x720")  # dimenciones de la ventana
+ventana = ctk.CTk() # configuracion de la ventana
+ventana._set_appearance_mode("light")  # cambia el modo de la apariencia 
+ventana.title("Garras, Perros y Llaveros S.A. - Recuerdos") # asigna titulo a la ventana
+ventana.geometry("1270x720")  # dimensiones de la ventana
 letra_elegida = ""
 
 
-def funcion_aceptar():
-    global letra_elegida, letra_seleccionada, entrada_letranueva
-    letra_elegida = entrada_letranueva.get()
-    letra_seleccionada.configure(
-        text="Letra seleccionada: "+str(letra_elegida))
+# def funcion_aceptar():
+#     global letra_elegida, letra_seleccionada, entrada_letranueva
+#     letra_elegida = entrada_letranueva.get()
+#     letra_seleccionada.configure(text="Letra seleccionada: "+str(letra_elegida))
 
+def funcion_aceptar():
+    global nuevaLetra, letra_elegida
+    nuevaLetra = entrada_letranueva.get()
+    mensaje_error= ctk.CTkLabel(ventana,text="")
+    mensaje_error.place(x=500,y=550)
+    mensaje_error.configure(text="")
+    if nuevaLetra.isdigit():
+        mensaje_error.configure(text="¡Eso no parece una letra!")
+        return False
+    if len(nuevaLetra) > 1 or len(nuevaLetra) == 0:
+        mensaje_error.configure(text="¡Recuerda que las letras tienen 1 caracter!")
+        print('es más de un caracter')
+        return False
+    else:
+        print('correcto')
+        letra_elegida = nuevaLetra.upper()
+        mensaje_error.configure(text="")
+        letra_seleccionada.configure(text="Letra seleccionada: "+str(letra_elegida))
 
 def cambiarletra():
     global letra_elegida, entrada_letranueva, aceptar, letra_seleccionada, cambiarletraboton
-    # interfaz cambiar letra
-    Ingrese_letranueva = ctk.CTkLabel(ventana, text="Ingrese la letra:  ", font=(
-        "consolas", 18, "bold"), width=400, height=10)
+
+    # Interfaz cambiar letra
+    Ingrese_letranueva = ctk.CTkLabel(ventana, text="Ingrese la letra:  ", font=("consolas", 18, "bold"), width=400, height=10)
     Ingrese_letranueva.place(x=400, y=400)
-    entrada_letranueva = ctk.CTkEntry(ventana, font=(
-        "consolas", 12, "bold"), width=100, height=50)
+    entrada_letranueva = ctk.CTkEntry(ventana, font=("consolas", 12, "bold"), width=100, height=50)
     entrada_letranueva.place(x=500, y=450)
-    aceptar = ctk.CTkButton(ventana, text="Aceptar", font=(
-        "arial", 18), height=50, width=200, command=funcion_aceptar)
+    aceptar = ctk.CTkButton(ventana, text="Aceptar", font=("arial", 18), height=50, width=200, command=funcion_aceptar)
     aceptar.place(x=700, y=450)
     cambiarletraboton.place_forget()
 
@@ -50,8 +63,7 @@ def algoritmo_sugerencia():
         R = texto[0]
     resultado.configure(text=r)
     letra_elegida = letra_masrepetida
-    letra_seleccionada = ctk.CTkLabel(
-        ventana, text="Letra seleccionada: "+str(letra_elegida), font=("consolas", 20, "bold"))
+    letra_seleccionada = ctk.CTkLabel(ventana, text="Letra seleccionada: "+str(letra_elegida), font=("consolas", 20, "bold"))
     letra_seleccionada.place(x=500, y=300)
     cambiarletraboton = ctk.CTkButton(ventana, text="Cambiar letra", font=(
         "arial", 18), height=50, width=200, command=cambiarletra)
