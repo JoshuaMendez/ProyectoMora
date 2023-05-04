@@ -6,12 +6,11 @@ ventana.title("Garras, Perros y Llaveros S.A. - Recuerdos") # asigna titulo a la
 ventana.geometry("1270x720")  # dimensiones de la ventana
 letra_elegida = ""
 
-
-# def funcion_aceptar():
-#     global letra_elegida, letra_seleccionada, entrada_letranueva
-#     letra_elegida = entrada_letranueva.get()
-#     letra_seleccionada.configure(text="Letra seleccionada: "+str(letra_elegida))
-
+def funcion_imprimir():
+    boton_confrimar=ctk.CTkButton(ventana, text="Confirmar", font=("arial", 18), height=50, width=200)
+    boton_confrimar.place(x=100,y=550)
+    grafico=ctk.CTkButton(ventana, text="imagen", font=("arial", 18), height=300, width=300)
+    grafico.place(x=100,y=200)
 def funcion_aceptar():
     global nuevaLetra, letra_elegida
     nuevaLetra = entrada_letranueva.get()
@@ -68,7 +67,7 @@ def algoritmo_sugerencia():
     cambiarletraboton = ctk.CTkButton(ventana, text="Cambiar letra", font=(
         "arial", 18), height=50, width=200, command=cambiarletra)
     cambiarletraboton.place(x=500, y=340)
-    imprimir = ctk.CTkButton(ventana, text="Imprimir", font=("arial", 18), height=50, width=200)
+    imprimir = ctk.CTkButton(ventana, text="Imprimir", font=("arial", 18), height=50, width=200,command=funcion_imprimir)
     imprimir.place(x=800, y=340)
 
 def rankingMasRepetida():
