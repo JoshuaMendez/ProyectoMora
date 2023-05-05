@@ -9,8 +9,9 @@ letra_elegida = ""
 def funcion_imprimir():
     boton_confrimar=ctk.CTkButton(ventana, text="Confirmar", font=("arial", 18), height=50, width=200)
     boton_confrimar.place(x=100,y=550)
-    grafico=ctk.CTkButton(ventana, text="imagen", font=("arial", 18), height=300, width=300)
+    grafico=ctk.CTkButton(ventana,image=img, font=("arial", 18), height=300, width=300)
     grafico.place(x=100,y=200)
+    img= ctk.CTkImage(__file__="")
 def funcion_aceptar():
     global nuevaLetra, letra_elegida
     nuevaLetra = entrada_letranueva.get()
@@ -27,7 +28,7 @@ def funcion_aceptar():
     else:
         print('correcto')
         letra_elegida = nuevaLetra.upper()
-        mensaje_error.configure(text="Se cambio exitosamente")
+        mensaje_error.configure(text="Se cambio exitosamente  ")
         letra_seleccionada.configure(text="Letra seleccionada: "+str(letra_elegida))
 
 def cambiarletra():
