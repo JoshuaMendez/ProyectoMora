@@ -45,7 +45,7 @@ def cambiarletra():
 
 
 def algoritmo_sugerencia():
-    global letra_elegida, letra_seleccionada, cambiarletraboton, imprimir
+    global letra_elegida, letra_seleccionada, cambiarletraboton, imprimir, cantidad_repeticionL
     texto = entrada_texto.get()
     texto = texto.upper()
     cantidad_repeticionL = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0, "G": 0, "H": 0, "I": 0, "J": 0, "K": 0, "L": 0,
@@ -71,6 +71,8 @@ def algoritmo_sugerencia():
     imprimir = ctk.CTkButton(ventana, text="Imprimir", font=("arial", 18), height=50, width=200,command=funcion_imprimir)
     imprimir.place(x=800, y=340)
 
+def rankingMasRepetida():
+    print('hola')
 
 # elementos de la ventana principal
 Titulo = ctk.CTkLabel(
