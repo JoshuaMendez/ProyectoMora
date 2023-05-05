@@ -1,7 +1,7 @@
 import tkinter as tk
 import customtkinter as ctk
 ventana = ctk.CTk() # configuracion de la ventana
-ventana._set_appearance_mode("light")  # cambia el modo de la apariencia 
+ventana._set_appearance_mode("dark")  # cambia el modo de la apariencia 
 ventana.title("Garras, Perros y Llaveros S.A. - Recuerdos") # asigna titulo a la ventana
 ventana.geometry("1270x720")  # dimensiones de la ventana
 letra_elegida = ""
@@ -15,7 +15,7 @@ letra_elegida = ""
 def funcion_aceptar():
     global nuevaLetra, letra_elegida
     nuevaLetra = entrada_letranueva.get()
-    mensaje_error= ctk.CTkLabel(ventana,text="")
+    mensaje_error= ctk.CTkLabel(ventana,text="",font=("consolas", 18, "bold"))
     mensaje_error.place(x=500,y=550)
     mensaje_error.configure(text="")
     if nuevaLetra.isdigit():
@@ -28,7 +28,7 @@ def funcion_aceptar():
     else:
         print('correcto')
         letra_elegida = nuevaLetra.upper()
-        mensaje_error.configure(text="")
+        mensaje_error.configure(text="Se cambio exitosamente")
         letra_seleccionada.configure(text="Letra seleccionada: "+str(letra_elegida))
 
 def cambiarletra():
