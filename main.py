@@ -1,3 +1,4 @@
+from PIL import ImageTk, Image
 import tkinter as tk
 import customtkinter as ctk
 ventana = ctk.CTk() # configuracion de la ventana
@@ -7,11 +8,15 @@ ventana.geometry("1270x720")  # dimensiones de la ventana
 letra_elegida = ""
 
 def funcion_imprimir():
+    global letra_elegida
     boton_confrimar=ctk.CTkButton(ventana, text="Confirmar", font=("arial", 18), height=50, width=200)
     boton_confrimar.place(x=100,y=550)
-    grafico=ctk.CTkButton(ventana,image=img, font=("arial", 18), height=300, width=300)
+    if letra_elegida=="A":
+        img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\letraA.jpg"), size=(300, 300))
+    
+    grafico=ctk.CTkLabel(ventana,text="",image=img, height=300, width=300)
     grafico.place(x=100,y=200)
-    img= ctk.CTkImage(__file__="")
+  
 def funcion_aceptar():
     global nuevaLetra, letra_elegida
     nuevaLetra = entrada_letranueva.get()
