@@ -7,6 +7,8 @@ ventana.title("Garras, Perros y Llaveros S.A. - Recuerdos") # asigna titulo a la
 ventana.geometry("1270x720")  # dimensiones de la ventana
 letra_elegida = ""
 
+#def funcion_confirmar():
+
 def funcion_imprimir():
     global letra_elegida
     boton_confrimar=ctk.CTkButton(ventana, text="Confirmar", font=("arial", 18), height=50, width=200)
