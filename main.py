@@ -3,7 +3,9 @@ import tkinter as tk
 from tkinter import filedialog
 import customtkinter as ctk
 import shutil
+import requests
 import os
+
 ventana = ctk.CTk() # configuracion de la ventana
 ventana._set_appearance_mode("dark")  # cambia el modo de la apariencia 
 ventana.title("Garras, Perros y Llaveros S.A. - Recuerdos") # asigna titulo a la ventana
@@ -13,8 +15,17 @@ letra_elegida = ""
 #Contrato
 #La función funcion_confirmar() muestra un cuadro de diálogo para seleccionar una carpeta y copia el archivo "letra.gcode" en la ruta seleccionada.
 def funcion_confirmar():
+    if letra_elegida == 'A':
+        folder_path = filedialog.askdirectory()
+        urlLetraA = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/letraA.txt"
+        nombreLetraA = 'letraA.gcode'
+        textoLetraA = requests.get(urlLetraA)
+        contenidoLetraA = 'letraA.gcode'
+        with open(nombreLetraA, 'w') as archivoLetraA:
+            archivoLetraA.write(contenidoLetraA)
+
     # Mostrar el cuadro de diálogo para seleccionar una carpeta
-    folder_path = filedialog.askdirectory()
+
 
     # Imprimir la ruta seleccionada en la consola
     print(folder_path)
