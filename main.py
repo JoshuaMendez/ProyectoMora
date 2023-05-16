@@ -23,6 +23,9 @@ def funcion_confirmar():
         contenidoLetraA = 'letraA.gcode'
         with open(nombreLetraA, 'w') as archivoLetraA:
             archivoLetraA.write(contenidoLetraA)
+        source_file = archivoLetraA
+        destination_file = os.path.join(folder_path, archivoLetraA)
+        shutil.copyfile(source_file, destination_file)
 
     # Mostrar el cuadro de diálogo para seleccionar una carpeta
 
