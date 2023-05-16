@@ -1,4 +1,5 @@
 from lettersFunctions import *
+import requests
 import time
 
 ExteriorListaX = [100, 120, 120, 115, 115, 105, 105, 100, 100]
@@ -259,9 +260,9 @@ def llamarLetras():
     elif pregunta == 'Q':
         cargandoLetras()
         letraQ()
-    elif pregunta == 'R':
-        cargandoLetras()
-        letraR()
+    # elif pregunta == 'R':
+    #     cargandoLetras()
+    #     letraR()
     elif pregunta == 'S':
         cargandoLetras()
         letraS()
@@ -271,21 +272,21 @@ def llamarLetras():
     elif pregunta == 'U':
         cargandoLetras()
         letraF()
-    elif pregunta == 'V':
-        cargandoLetras()
-        letraV()
-    elif pregunta == 'W':
-        cargandoLetras()
-        letraW()
-    elif pregunta == 'X':
-        cargandoLetras()
-        letraX()
-    elif pregunta == 'Y':
-        cargandoLetras()
-        letraY()
-    elif pregunta == 'Z':
-        cargandoLetras()
-        letraZ()
+    # elif pregunta == 'V':
+    #     cargandoLetras()
+    #     letraV()
+    # elif pregunta == 'W':
+    #     cargandoLetras()
+    #     letraW()
+    # elif pregunta == 'X':
+    #     cargandoLetras()
+    #     letraX()
+    # elif pregunta == 'Y':
+    #     cargandoLetras()
+    #     letraY()
+    # elif pregunta == 'Z':
+    #     cargandoLetras()
+    #     letraZ()
 
 
 
