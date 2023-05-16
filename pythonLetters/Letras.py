@@ -203,12 +203,17 @@ def cargandoLetras():
     time.sleep(0.5)
     print('')
 
+# Letra A
+urlLetraA = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/letraA.txt"
+textoLetraA = requests.get(urlLetraA)
+printearLetraA = textoLetraA.text
+
 def llamarLetras():
     pregunta = input('¿Qué Letra quieres imprimir?: ')
     pregunta = pregunta.upper()
     if pregunta == 'A':
         cargandoLetras()
-        letraA()
+        print(printearLetraA)
     elif pregunta == 'B':
         cargandoLetras()
         letraB()
