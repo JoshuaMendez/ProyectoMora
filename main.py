@@ -38,7 +38,7 @@ def funcion_confirmar():
 def funcion_imprimir():
     global letra_elegida
     if letra_elegida!="":
-        boton_confrimar=ctk.CTkButton(ventana, text="Confirmar", font=("arial", 18), height=50, width=200,command=funcion_confirmar)
+        boton_confrimar=ctk.CTkButton(ventana, text="Confirmar", font=("arial", 18), height=50, width=200,command=funcion_confirmar,style='Dark.TLabel')
         boton_confrimar.place(x=100,y=550)
         if letra_elegida=="A":
             img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\letraA.jpg"), size=(300, 300))
@@ -68,13 +68,13 @@ def funcion_aceptar():
     nuevaLetra = entrada_letranueva.get()
 
     # Reiniciar el mensaje de error
-    mensaje_error = ctk.CTkLabel(ventana, text="", font=("consolas", 18, "bold"))
+    mensaje_error = ctk.CTkLabel(ventana, text="", font=("consolas", 18, "bold"),style='Dark.TLabel')
     mensaje_error.place(x=500, y=550)
     mensaje_error.configure(text="")
 
     # Validar la nueva letra
     if nuevaLetra.isdigit():
-        mensaje_error.configure(text="¡Eso no parece una letra!")
+        mensaje_error.configure(text="¡Eso no parece una letra!                  ")
         return False
     if len(nuevaLetra) > 1 or len(nuevaLetra) == 0:
         mensaje_error.configure(text="¡Recuerda que las letras tienen 1 caracter!")
@@ -83,7 +83,7 @@ def funcion_aceptar():
     else:
         print('correcto')
         letra_elegida = nuevaLetra.upper()
-        mensaje_error.configure(text="Se cambio exitosamente  ")
+        mensaje_error.configure(text="Se cambió exitosamente                      ")
         letra_seleccionada.configure(text="Letra seleccionada: " + str(letra_elegida))
     # Sebastian Izquierdo S.
 # Contrato
@@ -95,11 +95,11 @@ def cambiarletra():
     global letra_elegida, entrada_letranueva, aceptar, letra_seleccionada, cambiarletraboton
 
     # Interfaz cambiar letra
-    Ingrese_letranueva = ctk.CTkLabel(ventana, text="Ingrese la letra:  ", font=("consolas", 18, "bold"), width=400, height=10)
+    Ingrese_letranueva = ctk.CTkLabel(ventana, text="Ingrese la letra:  ", font=("consolas", 18, "bold"), width=400, height=10,style='Dark.TLabel')
     Ingrese_letranueva.place(x=400, y=400)
     entrada_letranueva = ctk.CTkEntry(ventana, font=("consolas", 12, "bold"), width=100, height=50)
     entrada_letranueva.place(x=500, y=450)
-    aceptar = ctk.CTkButton(ventana, text="Aceptar", font=("arial", 18), height=50, width=200, command=funcion_aceptar)
+    aceptar = ctk.CTkButton(ventana, text="Aceptar", font=("arial", 18), height=50, width=200, command=funcion_aceptar,style='Dark.TLabel')
     aceptar.place(x=700, y=450)
     cambiarletraboton.place_forget()
 
@@ -114,7 +114,7 @@ def algoritmo_sugerencia():
     texto = entrada_texto.get()
     texto = texto.upper()
     cantidad_repeticionL = {"A": 0, "B": 0, "C": 0, "D": 0, "E": 0, "F": 0, "G": 0, "H": 0, "I": 0, "J": 0, "K": 0, "L": 0,
-                            "M": 0, "N": 0,"Ñ":0, "O": 0, "P": 0, "Q": 0, "R": 0, "S": 0, "T": 0, "U": 0, "V": 0, "W": 0, "X": 0, "Y": 0, "Z": 0,"":0}
+                            "M": 0, "N": 0,"Ñ":0, "O": 0, "P": 0, "Q": 0, "R": 0, "S": 0, "T": 0, "U": 0, "V": 0, "W": 0, "X": 0, "Y": 0, "Z": 0,"":0,"Á":0,"É":0,"Í":0,"Ó":0,"Ú":0}
     i = 0
     while i < len(texto):
         if texto[i] in cantidad_repeticionL:
@@ -129,12 +129,12 @@ def algoritmo_sugerencia():
         R = texto[0]
     resultado.configure(text=r)
     letra_elegida = letra_masrepetida
-    letra_seleccionada = ctk.CTkLabel(ventana, text="Letra seleccionada: "+str(letra_elegida), font=("consolas", 20, "bold"))
+    letra_seleccionada = ctk.CTkLabel(ventana, text="Letra seleccionada: "+str(letra_elegida), font=("consolas", 20, "bold"),style='Dark.TLabel')
     letra_seleccionada.place(x=500, y=300)
     cambiarletraboton = ctk.CTkButton(ventana, text="Cambiar letra", font=(
-        "arial", 18), height=50, width=200, command=cambiarletra)
+        "arial", 18), height=50, width=200, command=cambiarletra,style='Dark.TLabel')
     cambiarletraboton.place(x=500, y=340)
-    imprimir = ctk.CTkButton(ventana, text="Imprimir", font=("arial", 18), height=50, width=200,command=funcion_imprimir)
+    imprimir = ctk.CTkButton(ventana, text="Imprimir", font=("arial", 18), height=50, width=200,command=funcion_imprimir,style='Dark.TLabel')
     imprimir.place(x=800, y=340)
     #Sebastian Izquierdo S.
 
