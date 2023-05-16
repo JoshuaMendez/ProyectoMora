@@ -4,15 +4,6 @@ import time
 
 llamarLetras()
 
-def thing_not_complete():
-    print('Hola')
-animation = "|/-\\"
-idx = 0
-while thing_not_complete():
-    print(animation[idx % len(animation)], end="\r")
-    idx += 1
-    time.sleep(0.1)
-
 
 ExteriorListaX = [100, 120, 120, 115, 115, 105, 105, 100, 100]
 ExteriorListaY = [150, 150, 110, 110, 130, 130, 110, 110, 150]

@@ -10,14 +10,6 @@ while i <= 3:
         lista.append(elemento)
     i += 1
 
-def thing_not_complete():
-    print('Hola')
-animation = "|/-\\"
-idx = 0
-while thing_not_complete():
-    print(animation[idx % len(animation)], end="\r")
-    idx += 1
-    time.sleep(0.1)
 
 def cargandoLetras():
     print('')
