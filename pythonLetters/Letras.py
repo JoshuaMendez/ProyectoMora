@@ -208,6 +208,161 @@ urlLetraA = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/py
 textoLetraA = requests.get(urlLetraA)
 printearLetraA = textoLetraA.text
 
+# Letra B
+urlLetraB = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraB.txt"
+textoLetraB = requests.get(urlLetraB)
+printearLetraB = textoLetraB.text
+
+# Letra C
+urlLetraC = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraC.txt"
+textoLetraC = requests.get(urlLetraC)
+printearLetraC = textoLetraC.text
+
+# Letra D
+urlLetraD = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraD.txt"
+textoLetraD = requests.get(urlLetraD)
+printearLetraD = textoLetraD.text
+
+# Letra E
+urlLetraE = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraE.txt"
+textoLetraE = requests.get(urlLetraE)
+printearLetraE = textoLetraE.text
+
+# Letra F
+urlLetraF = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraF.txt"
+textoLetraF = requests.get(urlLetraF)
+printearLetraF = textoLetraF.text
+
+# Letra G
+urlLetraG = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraG.txt"
+textoLetraG = requests.get(urlLetraG)
+printearLetraG = textoLetraG.text
+
+# Letra H
+urlLetraH = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraH.txt"
+textoLetraH = requests.get(urlLetraH)
+printearLetraH = textoLetraH.text
+
+# Letra I
+urlLetraI = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraI.txt"
+textoLetraI = requests.get(urlLetraI)
+printearLetraI = textoLetraI.text
+
+# Letra J
+urlLetraJ = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraJ.txt"
+textoLetraJ = requests.get(urlLetraJ)
+printearLetraJ = textoLetraJ.text
+
+# Letra K
+urlLetraK = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraK.txt"
+textoLetraK = requests.get(urlLetraK)
+printearLetraK = textoLetraK.text
+
+# Letra L
+urlLetraL = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraL.txt"
+textoLetraL = requests.get(urlLetraL)
+printearLetraL = textoLetraL.text
+
+# Letra M
+urlLetraM = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraM.txt"
+textoLetraM = requests.get(urlLetraM)
+printearLetraM = textoLetraM.text
+
+# Letra N
+urlLetraN = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraN.txt"
+textoLetraN = requests.get(urlLetraN)
+printearLetraN = textoLetraN.text
+
+# Letra NI - Ñ
+urlLetraNI = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraNI.txt"
+textoLetraNI = requests.get(urlLetraNI)
+printearLetraNI = textoLetraNI.text
+
+# Letra O
+urlLetraO = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraO.txt"
+textoLetraO = requests.get(urlLetraO)
+printearLetraO = textoLetraO.text
+
+# Letra P
+urlLetraP = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraP.txt"
+textoLetraP = requests.get(urlLetraP)
+printearLetraP = textoLetraP.text
+
+# Letra Q
+urlLetraQ = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraQ.txt"
+textoLetraQ = requests.get(urlLetraQ)
+printearLetraQ = textoLetraQ.text
+
+# Letra R
+urlLetraR = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraR.txt"
+textoLetraR = requests.get(urlLetraR)
+printearLetraR = textoLetraR.text
+
+# Letra S
+urlLetraS = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraS.txt"
+textoLetraS = requests.get(urlLetraS)
+printearLetraS = textoLetraS.text
+
+# Letra T
+urlLetraT = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraT.txt"
+textoLetraT = requests.get(urlLetraT)
+printearLetraT = textoLetraT.text
+
+# Letra U
+urlLetraU = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraU.txt"
+textoLetraU = requests.get(urlLetraU)
+printearLetraU = textoLetraU.text
+
+# Letra V
+urlLetraV = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraV.txt"
+textoLetraV = requests.get(urlLetraV)
+printearLetraV = textoLetraV.text
+
+# Letra W
+urlLetraW = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraW.txt"
+textoLetraW = requests.get(urlLetraW)
+printearLetraW = textoLetraW.text
+
+# Letra X
+urlLetraX = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraX.txt"
+textoLetraX = requests.get(urlLetraX)
+printearLetraX = textoLetraX.text
+
+# Letra Y
+urlLetraY = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraY.txt"
+textoLetraY = requests.get(urlLetraY)
+printearLetraY = textoLetraY.text
+
+# Letra Z
+urlLetraZ = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraZ.txt"
+textoLetraZ = requests.get(urlLetraZ)
+printearLetraZ = textoLetraZ.text
+
+# Letra A Tilde
+urlLetraATilde = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraATilde.txt"
+textoLetraATilde = requests.get(urlLetraATilde)
+printearLetraATilde = textoLetraATilde.text
+
+# Letra E Tilde
+urlLetraETilde = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraETilde.txt"
+textoLetraETilde = requests.get(urlLetraETilde)
+printearLetraETilde = textoLetraETilde.text
+
+# Letra I Tilde
+urlLetraITilde = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraITilde.txt"
+textoLetraITilde = requests.get(urlLetraITilde)
+printearLetraITilde = textoLetraITilde.text
+
+# Letra O Tilde
+urlLetraOTilde = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraOTilde.txt"
+textoLetraOTilde = requests.get(urlLetraOTilde)
+printearLetraOTilde = textoLetraOTilde.text
+
+# Letra U Tilde
+urlLetraUTilde = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/LetraUTilde.txt"
+textoLetraUTilde = requests.get(urlLetraUTilde)
+printearLetraUTilde = textoLetraUTilde.text
+
 def llamarLetras():
     pregunta = input('¿Qué Letra quieres imprimir?: ')
     pregunta = pregunta.upper()
@@ -216,82 +371,82 @@ def llamarLetras():
         print(printearLetraA)
     elif pregunta == 'B':
         cargandoLetras()
-        letraB()
+        print(printearLetraB)
     elif pregunta == 'C':
         cargandoLetras()
-        letraC()
+        print(printearLetraC)
     elif pregunta == 'D':
         cargandoLetras()
-        letraD()
+        print(printearLetraD)
     elif pregunta == 'E':
         cargandoLetras()
-        letraE()
+        print(printearLetraE)
     elif pregunta == 'F':
         cargandoLetras()
-        letraF()
+        print(printearLetraF)
     elif pregunta == 'G':
         cargandoLetras()
-        letraG()
+        print(printearLetraG)
     elif pregunta == 'H':
         cargandoLetras()
-        letraH()
+        print(printearLetraH)
     elif pregunta == 'I':
         cargandoLetras()
-        letraI()
+        print(printearLetraI)
     elif pregunta == 'J':
         cargandoLetras()
-        letraJ()
+        print(printearLetraJ)
     elif pregunta == 'K':
         cargandoLetras()
-        letraK()
+        print(printearLetraK)
     elif pregunta == 'L':
         cargandoLetras()
-        letraL()
+        print(printearLetraL)
     elif pregunta == 'M':
         cargandoLetras()
-        letraM()
+        print(printearLetraM)
     elif pregunta == 'N':
         cargandoLetras()
-        letraN()
+        print(printearLetraN)
     elif pregunta == 'Ñ':
         cargandoLetras()
-        letraNI()
+        print(printearLetraNI)
     elif pregunta == 'O':
         cargandoLetras()
-        letraO()
+        print(printearLetraO)
     elif pregunta == 'P':
         cargandoLetras()
-        letraP()
+        print(printearLetraP)
     elif pregunta == 'Q':
         cargandoLetras()
-        letraQ()
-    # elif pregunta == 'R':
-    #     cargandoLetras()
-    #     letraR()
+        print(printearLetraQ)
+    elif pregunta == 'R':
+        cargandoLetras()
+        print(printearLetraR)
     elif pregunta == 'S':
         cargandoLetras()
-        letraS()
+        print(printearLetraS)
     elif pregunta == 'T':
         cargandoLetras()
-        letraT()
+        print(printearLetraT)
     elif pregunta == 'U':
         cargandoLetras()
-        letraF()
-    # elif pregunta == 'V':
-    #     cargandoLetras()
-    #     letraV()
-    # elif pregunta == 'W':
-    #     cargandoLetras()
-    #     letraW()
-    # elif pregunta == 'X':
-    #     cargandoLetras()
-    #     letraX()
-    # elif pregunta == 'Y':
-    #     cargandoLetras()
-    #     letraY()
-    # elif pregunta == 'Z':
-    #     cargandoLetras()
-    #     letraZ()
+        print(printearLetraU)
+    elif pregunta == 'V':
+        cargandoLetras()
+        print(printearLetraV)
+    elif pregunta == 'W':
+        cargandoLetras()
+        print(printearLetraW)
+    elif pregunta == 'X':
+        cargandoLetras()
+        print(printearLetraX)
+    elif pregunta == 'Y':
+        cargandoLetras()
+        print(printearLetraY)
+    elif pregunta == 'Z':
+        cargandoLetras()
+        print(printearLetraZ)
 
 
 
