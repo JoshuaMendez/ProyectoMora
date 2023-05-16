@@ -303,6 +303,8 @@ def funcion_confirmar():
         with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
             archivo.write(contenido)
         print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    impresion_exitosa = ctk.CTkLabel(ventana, text="La impresión ha sido un exito  ", font=("consolas", 18, "bold"), width=400, height=10)
+    impresion_exitosa.place(x=0, y=100)
     
 #Contrato
 #La función funcion_confirmar() valida que letra ha sido elegida y con base a la letra elegida entraga el grafico de como se veria impresa en 3D y abre la opcion de confirmar impresión.
