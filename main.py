@@ -16,35 +16,293 @@ letra_elegida = ""
 #La función funcion_confirmar() muestra un cuadro de diálogo para seleccionar una carpeta y copia el archivo "letra.gcode" en la ruta seleccionada.
 def funcion_confirmar():
     if letra_elegida == 'A':
-        folder_path = filedialog.askdirectory()
-        urlLetraA = "https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/txt/letraA.txt"
-        nombreLetraA = 'letraA.gcode'
-        textoLetraA = requests.get(urlLetraA)
-        contenidoLetraA = 'letraA.gcode'
-        with open(nombreLetraA, 'w') as archivoLetraA:
-            archivoLetraA.write(contenidoLetraA)
-        source_file = archivoLetraA
-        destination_file = os.path.join(folder_path, archivoLetraA)
-        shutil.copyfile(source_file, destination_file)
-
-    # Mostrar el cuadro de diálogo para seleccionar una carpeta
-
-
-    # Imprimir la ruta seleccionada en la consola
-    print(folder_path)
-
-    # Ruta del archivo "letra.gcode"
-    source_file = "letra.gcode"
-
-    # Ruta de destino donde se copiará el archivo
-    destination_file = os.path.join(folder_path, "letra.gcode")
-
-    # Copiar el archivo en la ruta seleccionada
-    shutil.copyfile(source_file, destination_file)
-
-    # Imprimir la ruta de destino en la consola
-    print("Archivo copiado en:", destination_file)
-    #Sebastian Izquierdo S.
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraA.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraA.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'Á':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraATilde.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraATilde.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'B':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraB.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraB.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'C':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraC.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraC.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'D':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraD.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraD.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'E':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraE.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraE.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'É':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraETilde.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraETilde.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'F':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraF.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraF.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'G':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraG.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraG.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'H':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraH.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraH.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'I':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraI.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraI.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'Í':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraITilde.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraITilde.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'J':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraJ.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraJ.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'K':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraK.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraK.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'L':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraL.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraL.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'M':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraM.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraM.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'N':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraN.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraN.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'Ñ':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraNI.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraNI.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'O':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraO.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraO.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'Ó':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraOTilde.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraOTilde.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'P':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraP.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraP.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'Q':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraQ.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraQ.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'R':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraR.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraR.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'S':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraS.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraS.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'T':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraT.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraT.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'U':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraU.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraU.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'Ú':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraUTilde.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraUTilde.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'V':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraV.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraV.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'W':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraW.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraW.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'X':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraX.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraX.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'Y':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraY.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraY.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
+    elif letra_elegida == 'Z':
+        url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraZ.gcode'
+        ruta_destino = filedialog.askdirectory()
+        nombre_archivo = 'letraZ.gcode'
+        response = requests.get(url)
+        contenido = response.text
+        with open(f"{ruta_destino}/{nombre_archivo}", 'w') as archivo:
+            archivo.write(contenido)
+        print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
     
 #Contrato
 #La función funcion_confirmar() valida que letra ha sido elegida y con base a la letra elegida entraga el grafico de como se veria impresa en 3D y abre la opcion de confirmar impresión.
