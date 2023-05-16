@@ -41,15 +41,69 @@ def funcion_imprimir():
         boton_confrimar=ctk.CTkButton(ventana, text="Confirmar", font=("arial", 18), height=50, width=200,command=funcion_confirmar)
         boton_confrimar.place(x=100,y=550)
         if letra_elegida=="A":
-            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\letraA.jpg"), size=(300, 300))
-        if letra_elegida=="A":
-            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\letraA.jpg"), size=(300, 300))
-        if letra_elegida=="A":
-            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\letraA.jpg"), size=(300, 300))
-        if letra_elegida=="A":
-            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\letraA.jpg"), size=(300, 300))
-        if letra_elegida=="A":
-            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\letraA.jpg"), size=(300, 300))
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraA.png"), size=(300, 300))
+        if letra_elegida=="B":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraB.png"), size=(300, 300))
+        if letra_elegida=="C":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraC.png"), size=(300, 300))
+        if letra_elegida=="D":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraD.png"), size=(300, 300))
+        if letra_elegida=="E":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraE.png"), size=(300, 300))
+        if letra_elegida=="F":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraF.png"), size=(300, 300))
+        if letra_elegida=="G":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraG.png"), size=(300, 300))
+        if letra_elegida=="H":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraH.png"), size=(300, 300))
+        if letra_elegida=="I":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraI.png"), size=(300, 300))
+        if letra_elegida=="J":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraJ.png"), size=(300, 300))
+        if letra_elegida=="K":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraK.png"), size=(300, 300))
+        if letra_elegida=="L":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraL.png"), size=(300, 300))
+        if letra_elegida=="M":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraM.png"), size=(300, 300))
+        if letra_elegida=="N":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraN.png"), size=(300, 300))
+        if letra_elegida=="O":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraO.png"), size=(300, 300))
+        if letra_elegida=="P":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraP.png"), size=(300, 300))
+        if letra_elegida=="Q":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraQ.png"), size=(300, 300))
+        if letra_elegida=="R":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraR.png"), size=(300, 300))
+        if letra_elegida=="S":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraS.png"), size=(300, 300))
+        if letra_elegida=="T":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraT.png"), size=(300, 300))
+        if letra_elegida=="U":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraU.png"), size=(300, 300))
+        if letra_elegida=="V":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraV.png"), size=(300, 300))
+        if letra_elegida=="W":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraW.png"), size=(300, 300))
+        if letra_elegida=="X":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraX.png"), size=(300, 300))
+        if letra_elegida=="Y":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraY.png"), size=(300, 300))
+        if letra_elegida=="Z":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraZ.png"), size=(300, 300))
+        if letra_elegida=="Ñ":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraNI.png"), size=(300, 300))
+        if letra_elegida=="Á":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraATilde.png"), size=(300, 300))
+        if letra_elegida=="É":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraETilde.png"), size=(300, 300))
+        if letra_elegida=="Í":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraITilde.png"), size=(300, 300))
+        if letra_elegida=="Ó":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraOTilde.png"), size=(300, 300))
+        if letra_elegida=="Ú":
+            img= ctk.CTkImage(dark_image=Image.open("Desktop\ProyectoMora\pythonLetters\screenshots\letraUTilde.png"), size=(300, 300))
         grafico=ctk.CTkLabel(ventana,text="",image=img, height=300, width=300)
         grafico.place(x=100,y=200)
     else:
