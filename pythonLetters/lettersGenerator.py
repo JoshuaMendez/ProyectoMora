@@ -2,15 +2,16 @@ from lettersFunctionalities import *
 
 llamarLetras()
 
-
-ExteriorListaX = [100, 120, 120, 115, 115, 105, 105, 100, 100]
-ExteriorListaY = [150, 150, 110, 110, 130, 130, 110, 110, 150]
-InteriorListaX = []
-InteriorListaY = []
+ExteriorListaX = [100, 120, 120, 115, 115, 105, 105, 100, 100] # Lista que almacena las coordenadas X del contorno externo de las letras
+ExteriorListaY = [150, 150, 110, 110, 130, 130, 110, 110, 150] # Lista que almacena las coordenadas Y del contorno externo de las letras
+InteriorListaX = [] # Lista que almacena las coordenas interiores X, todos estos valores se calculan en el código de abajo
+InteriorListaY = [] # Lista que almacena las coordendas interiores Y, todos estos valores se calculan en el código de abajo
+rellenoHorizontalLista =[] # Lista que almacena cómo iría el relleno horizontal de las letras
+rellenoVerticalLista = [] # Lista que almacena cómo iría el relleno vertical de las letras
 
 
 #Especificaciones impresora
-#Contorno Exterior
+# Empezamos en 0s (Centro)
 
 ExteriorPosX = 0
 ExteriorPosY = 0
@@ -18,8 +19,12 @@ DiferenciaExterior = 0
 PosZ = 0.25
 E = 0
 
+# Halla la diferencia que hay entre una coordenada y la que sigue para conseguir el valor por el cual se va a multiplicar.
+# También imprime las coordenadas.
+
 while ExteriorPosX < len(ExteriorListaX) and ExteriorPosY < len(ExteriorListaY): 
 
+    # Calcula la diferencia para que no se salga de la lista
     if DiferenciaExterior < (len(ExteriorListaX)) and DiferenciaExterior < (len(ExteriorListaY)) and (DiferenciaExterior != len(ExteriorListaX ) - 1):
 
         DiferenciaExterior = DiferenciaExterior + 1
@@ -34,13 +39,13 @@ while ExteriorPosX < len(ExteriorListaX) and ExteriorPosY < len(ExteriorListaY):
 
         E = E + RE 
         E = round(E, 3)
-
+    # Si este valor es igual a 0 imprime un G0
     if ExteriorPosX == 0 and ExteriorPosY == 0:
         ExteriorListaX
-    
+    # Si este valor es mayor a 1 y menor a los otros valores, las imprime como G1
     if ExteriorPosX > 1 and ExteriorPosY > 1 and ExteriorPosX < (len(ExteriorListaX) - 1) and ExteriorPosY < (len(ExteriorListaY) - 1):
         ExteriorListaX
-
+        
     if DiferenciaExterior == (len(ExteriorListaX) - 1):
 
         E1 = abs(int(ExteriorListaX[-1]) - int(ExteriorListaX[0]))
@@ -58,12 +63,12 @@ while ExteriorPosX < len(ExteriorListaX) and ExteriorPosY < len(ExteriorListaY):
     ExteriorPosX = ExteriorPosX + 1
     ExteriorPosY = ExteriorPosY + 1
 
-#Contorno Interior
+# Para el contorno interior se utilizan las coordenadas ya ingresadas y se le resta o suma 0.3
 
 InteriorPosX = 0
 InteriorPosY = 0
 DiferenciaInterior = 0
-
+# dependiendo de donde esté ubicada, si el valor menos 0.3 es menor a 100 entonces le suma 0.3
 while InteriorPosX < len(ExteriorListaX) and InteriorPosY < len(ExteriorListaY):
 
     if ExteriorListaX[InteriorPosX] - 0.3 < 100:
@@ -71,7 +76,7 @@ while InteriorPosX < len(ExteriorListaX) and InteriorPosY < len(ExteriorListaY):
         InteriorListaX.append(ValorInterior)
     
     else:
-    
+        # y si la coordenada más 0.3 es mayor 120 entonces le resta 0.3 y se toma un punto medio de
         if ExteriorListaX[InteriorPosX] + 0.3 > 120:
             ValorInterior = ExteriorListaX[InteriorPosX] - 0.3
             InteriorListaX.append(ValorInterior)
@@ -95,7 +100,7 @@ while InteriorPosX < len(ExteriorListaX) and InteriorPosY < len(ExteriorListaY):
         InteriorListaY.append(ValorInterior)
     
     else:
-    
+        # referencia el cual es 110 para que lo evalúe en 3 casos diferentes y se realiza el mismo
         if ExteriorListaY[InteriorPosY] - 0.3 < 110:
             ValorInterior = ExteriorListaY[InteriorPosY] + 0.3
             InteriorListaY.append(ValorInterior)
@@ -117,7 +122,8 @@ while InteriorPosX < len(ExteriorListaX) and InteriorPosY < len(ExteriorListaY):
 
 InteriorPosX = 0
 InteriorPosY = 0
-
+# procedimiento con las coordenadas de Y. Este resultado se almacena en las listas Interioristas e
+# Interiorista y se hace el mismo proceso para hallar los valores de E.
 while InteriorPosX < len(InteriorListaX) and InteriorPosY < len(InteriorListaY):
 
     if DiferenciaInterior < (len(InteriorListaX) - 1) and DiferenciaInterior < (len(InteriorListaY) - 1):
@@ -158,6 +164,13 @@ if InteriorPosX == len(InteriorListaX) and InteriorPosY == len(InteriorListaY):
         E = E + E
         E = round(E, 3)
 
+# Ya con los contornos se hace el relleno vertical y horizontal en donde se ingresa la coordenada
+# inicial de X y este va sumando 0.3 hasta llegar a 120 que es la coordenada final y se establecen
+# los valores de Y, tanto el punto inicial como el punto final y se imprime un G0 y un G1 intercalados
+# para que siempre vuelve a la parte superior de la letra. Se ingresa el último valor que tomó E y la
+# distancia que va a recorrer y cada que avance 0.3 en X esta distancia se va a multiplicar por
+# 0.03 para conseguir el valor final de Y.
+
 #Relleno vertical 1
 
 x = 100
@@ -193,3 +206,7 @@ e = 3692.808
 while Y > 17.3:
     Y = Y - 0.3
     e = e + (0.03 * 27)
+
+# Se realiza el mismo procedimiento para el relleno horizontal solo que las coordenadas que
+# varían van a ser las de Y. Se realiza todo este proceso hasta que el valor en Z sea 2 lo cual
+# equivale a las 8 capas que contiene la letra y se obtiene el código G que se envía a la impresora.
