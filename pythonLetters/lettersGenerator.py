@@ -1,6 +1,4 @@
 from lettersFunctionalities import *
-import requests
-import time
 
 llamarLetras()
 
