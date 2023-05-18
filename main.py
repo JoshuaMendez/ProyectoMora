@@ -14,6 +14,7 @@ letra_elegida = ""
 
 #Contrato
 #La función funcion_confirmar() muestra un cuadro de diálogo para seleccionar una carpeta y copia el archivo "letra.gcode" en la ruta seleccionada.
+# {pre:letra_elegida ∈ {"A", "B", "C", ..., "Z", "Á", "É", "Í", "Ó", "Ú", "Ñ"}}
 def funcion_confirmar():
     if letra_elegida == 'A':
         url = 'https://raw.githubusercontent.com/JoshuaMendez/ProyectoMora/main/pythonLetters/gcode/letraA.gcode'
@@ -305,10 +306,11 @@ def funcion_confirmar():
         print(f"Archivo guardado en {ruta_destino}/{nombre_archivo}")
     impresion_exitosa = ctk.CTkLabel(ventana, text="La impresión ha sido un exito  ", font=("consolas", 18, "bold"), width=400, height=10)
     impresion_exitosa.place(x=0, y=100)
-    
+    #{post:nombre_archivo ∈ {gcode}}
 #Contrato
 #La función funcion_confirmar() valida que letra ha sido elegida y con base a la letra elegida entraga el grafico de como se veria impresa en 3D y abre la opcion de confirmar impresión.
 # usa la variable letra_elegido de tipo string , usa un boton y un label elementos de la interfaz.
+#{pre:letra_elegida ∈ {"A", "B", "C", ..., "Z", "Á", "É", "Í", "Ó", "Ú", "Ñ"}}
 def funcion_imprimir():
     global letra_elegida
     if letra_elegida!="":
@@ -382,13 +384,14 @@ def funcion_imprimir():
         grafico.place(x=100,y=200)
     else:
          return False
+    #{post:img ∈ {screenshots}
   #Sebastian Izquierdo S.
   # Contrato
 # La función funcion_aceptar() recibe una nueva letra ingresada, la valida y actualiza la letra elegida.
 # Utiliza las variables globales nuevaLetra y letra_elegida y son de tipo string.
 # Interfaz: entrada_letranueva (campo de entrada de texto), mensaje_error (etiqueta para mostrar mensajes de error), letra_seleccionada (etiqueta que muestra la letra seleccionada).
 # Retorna False si la nueva letra no es válida.
-
+# {pre:len(nuevaletra)>0 and len(nuevaletra)<0}
 def funcion_aceptar():
     global nuevaLetra, letra_elegida
 
@@ -413,12 +416,13 @@ def funcion_aceptar():
         letra_elegida = nuevaLetra.upper()
         mensaje_error.configure(text="Se cambió exitosamente                      ")
         letra_seleccionada.configure(text="Letra seleccionada: " + str(letra_elegida))
+    #{post:letra_seleccionada = letra_elegida}
     # Sebastian Izquierdo S.
 # Contrato
 # La función cambiarletra() muestra la interfaz para cambiar la letra seleccionada.
 # Utiliza las variables globales letra_elegida, entrada_letranueva, aceptar, letra_seleccionada y cambiarletraboton.
 # Interfaz: Ingrese_letranueva (etiqueta para indicar que se ingrese la nueva letra).
-
+#{pre: oprimir boton cambiar letra}
 def cambiarletra():
     global letra_elegida, entrada_letranueva, aceptar, letra_seleccionada, cambiarletraboton
 
@@ -430,13 +434,14 @@ def cambiarletra():
     aceptar = ctk.CTkButton(ventana, text="Aceptar", font=("arial", 18), height=50, width=200, command=funcion_aceptar)
     aceptar.place(x=700, y=450)
     cambiarletraboton.place_forget()
-
+#{post:aceptar = interfaz letranueva}
 # Sebastian Izquierdo S.
 
     #Contrato
     #La función algoritmo_sugerencia() analiza el texto ingresado y sugiere la letra más repetida como recordatorio.
     #Utiliza las variables globales letra_elegida, letra_seleccionada, cambiarletraboton, imprimir y cantidad_repeticionL.
     #Interfaz: Etiqueta que muestra el resultado de la sugerencia.
+    #{pre: valor diccionario de las letras>0}
 def algoritmo_sugerencia():
     global letra_elegida, letra_seleccionada, cambiarletraboton, imprimir, cantidad_repeticionL
     texto = entrada_texto.get()
@@ -464,7 +469,9 @@ def algoritmo_sugerencia():
     cambiarletraboton.place(x=500, y=340)
     imprimir = ctk.CTkButton(ventana, text="Imprimir", font=("arial", 18), height=50, width=200,command=funcion_imprimir)
     imprimir.place(x=800, y=340)
+    #{post:valor de letra_sugerida >= valor otras letras}
     #Sebastian Izquierdo S.
+
 
 # elementos de la ventana principal
 
